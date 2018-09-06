@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCc-9U-Og5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8f0-Kc-4c2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -57,6 +57,13 @@
                                     <action selector="loginClick:" destination="8f0-Kc-4c2" eventType="touchUpInside" id="vTK-jp-emQ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7F-qv-C82" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="369" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="googleSign:" destination="vWq-cp-Jk9" eventType="valueChanged" id="6Hf-pu-pG9"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.81347307232186306" green="1" blue="0.92427260586860194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,6 +73,9 @@
                             <constraint firstItem="X9Z-AL-tLA" firstAttribute="trailing" secondItem="4uz-uE-Evo" secondAttribute="trailing" id="IaH-3T-2Sf"/>
                             <constraint firstItem="X9Z-AL-tLA" firstAttribute="leading" secondItem="4uz-uE-Evo" secondAttribute="leading" id="MNE-J5-h1u"/>
                             <constraint firstItem="urx-uw-okS" firstAttribute="top" secondItem="rNj-2f-RrX" secondAttribute="bottom" constant="8" symbolic="YES" id="Mkt-WA-Cim"/>
+                            <constraint firstItem="d7F-qv-C82" firstAttribute="leading" secondItem="SF0-fk-uMI" secondAttribute="leading" constant="67" id="NZR-xO-Is7"/>
+                            <constraint firstItem="d7F-qv-C82" firstAttribute="top" secondItem="V5Q-dI-h4U" secondAttribute="bottom" constant="40" id="Owd-3Z-TyU"/>
+                            <constraint firstItem="rNj-2f-RrX" firstAttribute="top" secondItem="d7F-qv-C82" secondAttribute="bottom" constant="22" id="Vs8-qe-MLd"/>
                             <constraint firstItem="V5Q-dI-h4U" firstAttribute="top" secondItem="4uz-uE-Evo" secondAttribute="bottom" constant="22" id="VwM-Wt-9Oy"/>
                             <constraint firstItem="4uz-uE-Evo" firstAttribute="top" secondItem="X9Z-AL-tLA" secondAttribute="bottom" constant="26" id="WdQ-BO-Jx2"/>
                             <constraint firstItem="AtH-Jf-hPS" firstAttribute="top" secondItem="SF0-fk-uMI" secondAttribute="top" constant="30" id="ZOH-Hi-Y1d"/>
@@ -75,12 +85,14 @@
                             <constraint firstItem="X9Z-AL-tLA" firstAttribute="leading" secondItem="SF0-fk-uMI" secondAttribute="leading" constant="87" id="htF-Xx-qUe"/>
                             <constraint firstItem="4uz-uE-Evo" firstAttribute="centerX" secondItem="V5Q-dI-h4U" secondAttribute="centerX" id="iNr-zB-RKg"/>
                             <constraint firstItem="AtH-Jf-hPS" firstAttribute="leading" secondItem="SF0-fk-uMI" secondAttribute="leading" constant="16" id="qd7-17-yVb"/>
+                            <constraint firstItem="SF0-fk-uMI" firstAttribute="trailing" secondItem="d7F-qv-C82" secondAttribute="trailing" constant="68" id="wFd-9U-52A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SF0-fk-uMI"/>
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="X9Z-AL-tLA" id="hXQ-UN-Pab"/>
                         <outlet property="passwordTextfield" destination="4uz-uE-Evo" id="CJ8-Ga-Urt"/>
+                        <outlet property="signInButton" destination="d7F-qv-C82" id="bSm-ct-DsL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWq-cp-Jk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,7 +251,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KP1-SM-nGW"/>
-        <segue reference="Ett-uA-mrZ"/>
+        <segue reference="Krl-Tt-8Gc"/>
         <segue reference="ZGA-Nr-8dE"/>
     </inferredMetricsTieBreakers>
 </document>

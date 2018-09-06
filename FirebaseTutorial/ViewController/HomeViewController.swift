@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 
 class HomeViewController: UIViewController {
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController {
         if  Auth.auth().currentUser != nil{
             do{
             try Auth.auth().signOut()
+                GIDSignIn.sharedInstance().signOut()
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewID")
                 print("logout success")
                 self.present(vc , animated:  true , completion:  nil)

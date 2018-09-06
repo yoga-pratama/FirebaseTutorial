@@ -9,23 +9,38 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , GIDSignInUIDelegate {
     
     @IBOutlet weak var emailTextfield : UITextField!
     @IBOutlet weak var passwordTextfield : UITextField!
     
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //google sign in
+          GIDSignIn.sharedInstance().uiDelegate = self
+        
+       // GIDSignIn.sharedInstance().signIn()
+        ///
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if   Auth.auth().currentUser?.displayName != nil{
+            print("USER" ,Auth.auth().currentUser?.displayName)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeViewID")
+            present(vc!, animated:  true ,completion:  nil)
+        }
     }
     
     
@@ -55,6 +70,18 @@ class LoginViewController: UIViewController {
          }
         }
     }
+    
+    
+    @IBAction func googleSign(_ sender : AnyObject){
+        //google sign in
+         //GIDSignIn.sharedInstance().uiDelegate = self
+       
+       
+    }
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation
