@@ -14,7 +14,7 @@ Tambah line berikut di podfile
  - pod 'GoogleSignIn' .
 
 
-Pada APPDelegate dan view Controller  tambahkan 
+Pada AppDelegate dan ViewController  tambahkan 
 
 import Firebase
 import GoogleSignIn
