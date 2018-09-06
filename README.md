@@ -4,7 +4,7 @@ Tutorial Auth meggunakan firebase di Swift IOS
 
 Sample Code login yang terhubung ke firebase .
 
-Requirement 
+# Requirement 
 - Akun Firebase
 - Framework Cocoapods
 
@@ -15,6 +15,8 @@ Tambah line berikut di podfile
 
 
 Pada AppDelegate dan ViewController  tambahkan 
-
+```
 import Firebase
 import GoogleSignIn
+
+```
