@@ -7,9 +7,10 @@ Sample Code login yang terhubung ke firebase .
 Requirement 
 - Akun Firebase
 - Framework Cocoapods
-  
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'GoogleSignIn' . -- untuk google sign in
+
+Tambah line berikut di podfile
+ - pod 'Firebase/Core'
+ - pod 'Firebase/Auth'
+ - pod 'GoogleSignIn' .
 
 
