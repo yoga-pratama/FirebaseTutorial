@@ -9,10 +9,11 @@ Sample Code login yang terhubung ke firebase .
 - Framework Cocoapods
 
 Tambah line berikut di podfile
- - pod 'Firebase/Core'
- - pod 'Firebase/Auth'
- - pod 'GoogleSignIn' .
-
+ ```  
+ pod 'Firebase/Core'
+ pod 'Firebase/Auth'
+ pod 'GoogleSignIn' .
+```
 
 Pada AppDelegate dan ViewController  tambahkan 
 ```
