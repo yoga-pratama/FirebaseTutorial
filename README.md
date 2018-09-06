@@ -1,6 +1,6 @@
-# FirebaseTutorial
+# FirebaseTutorial IOS Swift
 
-Tutorial Auth meggunakan firebase
+Tutorial Auth meggunakan firebase di Swift IOS
 
 Sample Code login yang terhubung ke firebase .
 
